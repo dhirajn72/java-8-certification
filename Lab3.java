@@ -1,13 +1,13 @@
-class Lab2{
+class Lab3{
     public static void main(String[] args){
 
-Hello2 h = new Hello2();
+Hello3 h = new Hello3();
 h.process();
 
     }
 }
 
-interface Inter2{
+interface Inter3{
     default void process(){
     System.out.println("process()-Inter2 ");  
     }
@@ -18,16 +18,16 @@ interface Inter2{
 
 }
 
-class Hello2  extends SuperClass1 implements Inter2{
+class Hello3  extends SuperClass3 implements Inter3{
     public void process(){
        System.out.println("process()- Implementation");
-      // Inter2.super.process();
-      // super.process();
+       Inter3.super.process();
+       super.process();
     }
 }
 
 
-class SuperClass1{
+class SuperClass3{
     public void process(){
     System.out.println("process()-SuperClass1");  
     }
