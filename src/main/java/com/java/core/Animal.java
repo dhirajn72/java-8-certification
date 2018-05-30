@@ -6,8 +6,15 @@ package com.java.core;
 
 /**
  * @author Dhiraj
- * @date 12/05/18
+ * @date 20/05/18
  */
+
+/*
+ * All Rights Reserved @Dhiraj
+ */
+
+
 public interface Animal {
     void doStuff();
 }
+

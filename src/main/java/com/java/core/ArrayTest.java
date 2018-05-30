@@ -44,16 +44,5 @@ public class ArrayTest {
         string.add("singh");
         string.add("kumar");
 
-
-
-
-
-
-
-
-
-
-
-
     }
 }

@@ -1,3 +1,13 @@
+/*
+ * All Rights Reserved @Dhiraj
+ */
+
+package com.oracle;
+
+/**
+ * @author Dhiraj
+ * @date 20/05/18
+ */
 interface Inter1 {
     default void process() {
         System.out.println("process()");
@@ -9,7 +19,7 @@ interface Inter1 {
 
 }
 
-class Lab1 {
+public class Lab1 {
     public static void main(String[] args) {
 
         Hello h = new Hello();

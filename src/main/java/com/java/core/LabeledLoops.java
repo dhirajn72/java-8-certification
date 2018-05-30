@@ -6,8 +6,12 @@ package com.java.core;
 
 /**
  * @author Dhiraj
- * @date 14/05/18
+ * @date 20/05/18
  */
+/*
+ * All Rights Reserved @Dhiraj
+ */
+
 public class LabeledLoops {
     public static void main(String[] args) {
 
@@ -20,9 +24,6 @@ public class LabeledLoops {
             }
         }
         System.out.println("out from outer!!");
-
-
-
         int age=0;
         outer:
         while (true){
@@ -33,8 +34,6 @@ public class LabeledLoops {
             age++;
             System.out.println("not Eligible!!"+age);
         }
-
-
-
     }
 }
+
