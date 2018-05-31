@@ -2,10 +2,14 @@
  * All Rights Reserved @Dhiraj
  */
 
+/*
+ * All Rights Reserved @Dhiraj
+ */
+
 package com.oca.chapter1;
 
 import com.java.core.Fruit;
-import com.oracle.App;
+
 
 /**
  * @author Dhiraj

@@ -31,7 +31,7 @@ public class Child extends Parent {
     }
 
     public void show(){
-       // int count=99;
+        // int count=99;
         System.out.println(x);
         System.out.println(count);
         //Parent p= new Child();

@@ -10,7 +10,7 @@ package com.java.core;
  */
 public class Test2 {
 
-   final String name;
+    final String name;
 
     public Test2(String name) {
         this.name = name;
@@ -30,4 +30,3 @@ public class Test2 {
 
 }
 
-// dhiraj

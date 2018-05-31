@@ -9,7 +9,8 @@ package com.enthuware.mock1;
  * @date 30/05/18
  */
 public class Super {
-    void m1(){
+    public void m1(){
+        System.out.println("Super-m1()");
 
     }
 }

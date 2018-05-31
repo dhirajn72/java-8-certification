@@ -13,17 +13,17 @@ public class Test4 {
     public static void main(String[] args) {
 
         //int x;
-       for (int x=0;x<5;x++){
+        for (int x=0;x<5;x++){
 
-           //break;
-           //continue;
-       }
+            //break;
+            //continue;
+        }
 
-       // Break or continue can always be used with loops or switch statements !
-      // if (true){
-          // break;
-           //continue;
-       //}
+        // Break or continue can always be used with loops or switch statements !
+        // if (true){
+        // break;
+        //continue;
+        //}
 
 
         try {

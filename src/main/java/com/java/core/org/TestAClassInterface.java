@@ -2,7 +2,7 @@
  * All Rights Reserved @Dhiraj
  */
 
-package com.java.core;
+package com.java.core.org;
 
 /**
  * @author Dhiraj

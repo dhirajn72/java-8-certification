@@ -24,7 +24,7 @@ public class Test1 {
             System.out.println("Under Lambda::"+res);
             return res;*/
 
-       // };
+        // };
         int res=inter2.operation(4,4);
         System.out.println("Outside lambda::"+res);
 
@@ -32,7 +32,7 @@ public class Test1 {
             System.out.println("This anonymous implementation does not takes any parameters");
             System.out.println("We can have any number");
             System.out.println("of statements here!!");
-            };
+        };
         inter3.operation();
 
 

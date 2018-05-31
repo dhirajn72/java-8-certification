@@ -18,6 +18,10 @@ public class Dog {
         this.weight = weight;
         this.age = age;
     }
+
+    public Dog() {
+    }
+
     String getName() {return name;}
     int getWeight() { return weight;}
     int getAge() { return age;}

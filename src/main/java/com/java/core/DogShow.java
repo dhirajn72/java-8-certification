@@ -32,7 +32,7 @@ public class DogShow {
     void go() {
         new Hounds().bark();
         ((Dog1)new Hounds()).bark();
-       // ((Dog1)new Hounds()).sniff();
+        // ((Dog1)new Hounds()).sniff();
 
     }
 

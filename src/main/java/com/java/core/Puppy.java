@@ -19,4 +19,9 @@ public class Puppy extends Dog implements Animal{
     public static void main(String[] args) {
 
     }
+
+    @Override
+    public void doStuff() {
+
+    }
 }

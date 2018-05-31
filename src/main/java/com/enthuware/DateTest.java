@@ -23,8 +23,8 @@ public class DateTest {
     }
 }
 class Sub extends Super{
-    void m1() {
-    }
+    /*void m1() {
+    }*/
 }
 
 interface  Inter1{
