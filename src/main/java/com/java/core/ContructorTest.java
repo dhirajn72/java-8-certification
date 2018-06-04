@@ -20,5 +20,5 @@ class Super{
 }
 
 class Sub extends Super{
- //Compilation fails if Super class DC is commented out!
+    //Compilation fails if Super class DC is commented out!
 }
