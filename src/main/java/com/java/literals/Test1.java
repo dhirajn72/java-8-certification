@@ -26,5 +26,10 @@ public class Test1 {
         System.out.println(s+" "+f1);
         byte b1=(byte)128;
         System.out.println(b1);
+        new Test1().m1();
     }
+
+    public native void m1();
+
+
 }
