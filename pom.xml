@@ -5,7 +5,10 @@
   <groupId>com.oracle</groupId>
   <artifactId>java8-certification</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <packaging>jar</packaging>
+    <modules>
+        <module>ocp-8</module>
+    </modules>
+    <packaging>pom</packaging>
 
   <name>java8-certification</name>
   <url>http://maven.apache.org</url>

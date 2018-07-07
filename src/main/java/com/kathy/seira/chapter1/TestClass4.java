@@ -17,7 +17,7 @@ public class TestClass4 {
             if (counter >= 5) {
                 break;
             } else {
-                continue;
+                //continue;
             }
             if (value > 4) {
                 arr[counter] = value + 1;
