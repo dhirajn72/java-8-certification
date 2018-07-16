@@ -26,5 +26,6 @@ public class TestClass {
 
         System.out.println(localDateSupplier.get());
         System.out.println(localDateSupplier.get()==localDateSupplier.get());
+        System.out.println(stringSupplier.get());
     }
 }
