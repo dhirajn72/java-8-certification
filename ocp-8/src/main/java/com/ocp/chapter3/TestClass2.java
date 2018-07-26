@@ -19,7 +19,7 @@ public class TestClass2 {
         Object o2= new String[1];
 
         List<String > list= new ArrayList<>();
-        list.add("A");
+        list.add("TestClass1");
         list.add("B");
         list.add("C");
         System.out.println(list);

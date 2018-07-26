@@ -20,7 +20,7 @@ public class TestClass4 {
         List<Squirrel> squirrels= new ArrayList<>();
         Squirrel s1=new Squirrel("C");
         s1.setWeight(2);
-        Squirrel s2=new Squirrel("A");
+        Squirrel s2=new Squirrel("TestClass1");
         s2.setWeight(5);
         Squirrel s3=new Squirrel("B");
         s3.setWeight(1);

@@ -18,7 +18,7 @@ import java.util.function.Supplier;
  */
 public class TestClass5 {
     public static void main(String[] args) {
-        Duck d1= new Duck(50,"A");
+        Duck d1= new Duck(50,"TestClass1");
         Duck d2= new Duck(20,"D");
         List<Duck> ducks= new ArrayList<>();
         ducks.add(d1);

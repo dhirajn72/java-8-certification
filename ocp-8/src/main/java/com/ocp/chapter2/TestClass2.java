@@ -14,14 +14,14 @@ public class TestClass2 {
 
 interface A1{
     default void m1(){
-        System.out.println("A's-m1()");
+        System.out.println("TestClass1's-m1()");
     }
 }
 
 interface B1{
 
     default void m1(){
-        System.out.println("A's-m1()");
+        System.out.println("TestClass1's-m1()");
     }
     void m2();
 }

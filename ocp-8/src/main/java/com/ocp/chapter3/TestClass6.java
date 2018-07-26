@@ -32,12 +32,12 @@ public class TestClass6 {
         };
 
         Map<String,String> stringMap= new HashMap<>();
-        stringMap.put("A","Apple");
+        stringMap.put("TestClass1","Apple");
         stringMap.put("B","Ball");
         stringMap.put("C","Cat");
 
         System.out.println(stringMap);
-        stringMap.merge("A","Test",mapper);
+        stringMap.merge("TestClass1","Test",mapper);
         System.out.println(stringMap);
 
 

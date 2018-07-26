@@ -41,3 +41,15 @@ public class TestClass1 {
         return EqualsBuilder.reflectionEquals(this,obj);
     }
 }
+
+
+abstract class T{
+    static void clean(){
+
+    }
+}
+ class SubT extends T{
+   // @Override // This is not overriding, because if you uncomment this annotation, compilation fails
+    static void clean() {
+    }
+}

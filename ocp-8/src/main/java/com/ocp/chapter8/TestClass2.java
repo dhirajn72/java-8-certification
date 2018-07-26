@@ -13,7 +13,7 @@ import java.util.function.Consumer;
  * @author Dhiraj
  * @date 16/07/18
  */
-public class TestClass {
+public class TestClass2 {
     public static void main(String[] args) {
         Consumer consumer= System.out::println;
         consumer.accept(File.separator);
