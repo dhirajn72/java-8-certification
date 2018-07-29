@@ -61,9 +61,6 @@ public class TestClass3 {
             return a.length()>b.length()?true:(a.length()>c.length()?true:false);
         };
         System.out.println(empTestPredicate.test("x","y","z"));
-
-
-
     }
 }
 
