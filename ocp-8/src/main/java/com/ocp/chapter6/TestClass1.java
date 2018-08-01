@@ -16,12 +16,14 @@ import java.io.IOException;
 public class TestClass1 {
     public static void main(String[] args) throws IOException {
         new TestClass1().m1();
+
     }
-    public void m1() throws FileNotFoundException{
+   public void m1() throws FileNotFoundException{
         try {
             new FileInputStream(new File("xzsx"));
         }catch (Exception e){
             throw e;
         }
     }
+
 }
