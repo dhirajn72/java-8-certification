@@ -47,6 +47,7 @@ public class TestClass3 {
         //while (true);
 
         System.out.println("@@@@@@");
+        //Path p=Paths.get(/*new URI(*/"file:///Users/300012951/work/learning/java8/java-8-certification/b.ser");
         System.out.println(p.subpath(0,7));
         System.out.println(p.subpath(2,3));
         System.out.println(p.subpath(6,7));
