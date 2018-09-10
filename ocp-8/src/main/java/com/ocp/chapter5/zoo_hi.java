@@ -14,8 +14,8 @@ public class zoo_hi extends ListResourceBundle{
     @Override
     protected Object[][] getContents() {
         return new String[][]{
-                {"hi","ka hal ba"}
-
+                {"hi","ka hal ba"},
+                {"hi","ka hal ba"},
         };
     }
 }

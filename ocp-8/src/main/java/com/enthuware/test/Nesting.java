@@ -17,7 +17,6 @@ public class Nesting {
 
 class A {
     char c;
-
     A(char c) {
         this.c = c;
     }

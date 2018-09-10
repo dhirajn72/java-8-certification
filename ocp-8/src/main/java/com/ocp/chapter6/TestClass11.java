@@ -4,7 +4,10 @@
 
 package com.ocp.chapter6;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
 
 /**
  * @author Dhiraj
@@ -16,5 +19,12 @@ public class TestClass11 {
         System.out.println(TimeUnit.MILLISECONDS.toNanos(1));
         System.out.println(TimeUnit.SECONDS.toMillis(1));
         System.out.println(TimeUnit.HOURS.toSeconds(1));
+        int[] arr= new int[]{1,2,3,4,5,6};
+        //System.out.println(Arrays.stream(arr).boxed().collect(Collectors.toList()));
+        int sum=0;
+        for (int i:arr)
+            sum+=i;
+        System.out.println(sum);
+        System.out.println(Arrays.stream(arr).sum());
     }
 }
