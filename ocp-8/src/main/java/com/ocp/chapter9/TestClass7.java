@@ -27,7 +27,7 @@ public class TestClass7 {
         new Double(7l);
 
         List<Employee>  employees= new ArrayList<Employee>();
-        employees.add(new Employee(12,"A"));
+        employees.add(new Employee(12,"A",20));
         addEmp(employees);
         System.out.println(employees);
 

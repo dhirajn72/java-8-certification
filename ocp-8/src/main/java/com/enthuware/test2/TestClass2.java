@@ -17,7 +17,7 @@ public class TestClass2 {
             ObjectInputStream ois =  new ObjectInputStream(new FileInputStream(new File("emp.ser")));
 
         ) {
-            Employee employee= new Employee(99,"singh");
+            Employee employee= new Employee(99,"singh",10);
             oos.writeObject(employee);
             //oos.close();
             System.out.println("Serialized !");

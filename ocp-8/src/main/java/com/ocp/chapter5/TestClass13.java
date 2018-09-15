@@ -15,7 +15,7 @@ import java.util.ResourceBundle;
 public class TestClass13 {
 
     public static void main(String[] args) {
-        ResourceBundle bundle= ResourceBundle.getBundle("com.ocp.chapter5.Zoo",Locale.US);
+        ResourceBundle bundle= ResourceBundle.getBundle("com.ocp.chapter5.Zoo_en_US",Locale.US);
         System.out.println(bundle.getObject("hi"));
 
     }

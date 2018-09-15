@@ -24,7 +24,7 @@ public class Zoo_en_US extends ListResourceBundle {
 
     public static void main(String[] args) {
         Locale.setDefault(new Locale("en"));
-        ResourceBundle bundle= ResourceBundle.getBundle("com.ocp.chapter5.Zoo", Locale.US);
+        ResourceBundle bundle= ResourceBundle.getBundle("com.ocp.chapter5.Zoo_en_US", Locale.US);
         System.out.println(bundle.getObject("hi"));
     }
 }

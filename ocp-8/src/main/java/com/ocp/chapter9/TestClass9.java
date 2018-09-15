@@ -18,7 +18,7 @@ public class TestClass9 {
         System.out.println(optional.orElse("other"));
         System.out.println(optional.orElseGet(()->"other supplier"));
         System.out.println(optional.orElseThrow(()->new RuntimeException("nothing found!")));
-        
+
     }
     private static Optional<String> getValue(String x) {
         //return Optional.empty();
