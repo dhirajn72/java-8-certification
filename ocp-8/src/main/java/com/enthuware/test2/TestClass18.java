@@ -16,17 +16,23 @@ import java.util.stream.Stream;
  */
 public class TestClass18 {
     public static void main(String[] args) throws IOException {
-        Path path= Paths.get("/Users/300012951/work/learning/java8/java-8-certification");
-        //Stream<Path> pathStream=Files.find(path,10,(x, y)->x.toString().endsWith(".java"));
+        Path path = Paths.get("/Users/300012951/work/learning/java8/java-8-certification");
+        /*Stream<Path> pathStream = Files.find(path, 10, (x, y) -> {
+            *//*System.out.println(y);*//*return x.toString().endsWith(".java");});*/
         //pathStream.forEach(System.out::println);
-        Files.list(path)
-                .filter(p->
-                        {
-                            System.out.println(p);
-                            return p.startsWith(".");
-                        }
-                )
-                .map(p->p.toAbsolutePath())
+        /*Files.list(path)
+                .filter(p -> { System.out.println(p);return p.startsWith("."); })
+                .map(p -> p.toAbsolutePath())
+                .forEach(System.out::println);*/
+
+        Path path1 = Paths.get("ocp-8");
+        //Path path1 = Paths.get("deleteme");
+
+        Files.list(path1)
+                .filter(p -> { System.out.println(p);return !Files.isDirectory(p); })
+                .map(p -> p.toAbsolutePath())
                 .forEach(System.out::println);
+
+
     }
 }

@@ -19,5 +19,7 @@ public class TestClass31 {
         System.out.println(Files.exists(p1));
         //System.out.println(System.getProperty("user.dir"));
         Files.walk(p1,5).filter(path -> path.toString().endsWith(".java")).forEach(System.out::println);
+        Files.walk(p1).filter(path -> path.toString().endsWith(".java")).forEach(System.out::println);
+
     }
 }

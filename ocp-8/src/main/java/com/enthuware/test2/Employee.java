@@ -58,6 +58,20 @@ public class Employee implements Serializable {
                 '}';
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Employee) {
+            Employee employee = (Employee) obj;
+            return this.id == employee.getId();
+        }
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return this.getId();
+    }
+
     /*private void writeObject(ObjectOutputStream out) throws IOException{
         out.writeInt(this.getId());
         out.writeUTF(this.getName());

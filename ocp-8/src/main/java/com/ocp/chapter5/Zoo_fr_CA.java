@@ -13,7 +13,7 @@ import java.util.ResourceBundle;
  * @date 29/07/18
  */
 
-public class Zoo_en_US extends ListResourceBundle {
+public class Zoo_fr_CA extends ListResourceBundle {
     @Override
     protected Object[][] getContents() {
         return new Object[][]{
@@ -24,7 +24,7 @@ public class Zoo_en_US extends ListResourceBundle {
 
     public static void main(String[] args) {
         Locale.setDefault(new Locale("en"));
-        ResourceBundle bundle= ResourceBundle.getBundle("com.ocp.chapter5.Zoo_en_US", Locale.US);
+        ResourceBundle bundle= ResourceBundle.getBundle("com.ocp.chapter5.Zoo", new Locale("fr","CA"));
         System.out.println(bundle.getObject("hi"));
     }
 }

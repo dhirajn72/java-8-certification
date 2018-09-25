@@ -6,6 +6,7 @@ package com.ocp.chapter9;
 
 import com.enthuware.test2.Employee;
 import com.ocp.utils.ListUtils;
+import sun.plugin.javascript.navig4.Link;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -37,9 +38,14 @@ public class TestClass14 {
         //booleanListMap.forEach((k,v)-> System.out.println(k+":"+v));
         System.out.println(booleanListMap);
 
-        Map<Integer,String> map=employees.stream().collect(Collectors.toMap(x->x.getId(),x->x.getName(),(v1,v2)->v1+","+v2)); //
+        LinkedHashMap<Integer,String> map=employees.stream().collect(Collectors.toMap(x->x.getId(),x->x.getName(),(v1,v2)->v1+","+v2,LinkedHashMap::new)); //
         //Map<Integer,String> map=employees.stream().collect(Collectors.toMap(x->x.getId(),x->x.getName())); //Exception in thread "main" java.lang.IllegalStateException: Duplicate key elephant at java.util.stream.Collectors.lambda$throwingMerger$0(Collectors.java:133)
         System.out.println(map);
+
+        LinkedHashMap<Integer,String> map1=map.entrySet().stream().sorted(Map.Entry.<Integer,String>comparingByValue().reversed()).collect(Collectors.toMap(x->x.getKey(),x->x.getValue(),(x,y)->y, LinkedHashMap::new));
+        System.out.println(map1);
+
+
     }
 }
 
