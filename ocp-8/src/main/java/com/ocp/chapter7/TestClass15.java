@@ -69,7 +69,9 @@ class WeightAnimal1 extends RecursiveTask<Double> {
             //invokeAll(new WeightAnimal1(weight, start, middle), new WeightAnimal1(weight, middle, end));
             RecursiveTask<Double> otherTask=new WeightAnimal1(weight,start,middle);
             otherTask.fork();
-            return new WeightAnimal1(weight,middle,end).compute()+otherTask.join();
+            //return otherTask.join() + new WeightAnimal1(weight,middle,end).compute(); // This is invalid, join() should not be at beginning
+            return new WeightAnimal1(weight,middle,end).compute()+otherTask.join();// Join should always be at end, because it has to wait for the forked tasks to complete
+
         }
     }
 }

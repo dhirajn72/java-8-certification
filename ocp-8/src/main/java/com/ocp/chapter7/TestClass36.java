@@ -18,6 +18,8 @@ import java.util.stream.Collectors;
  * @date 17/09/18
  */
 public class TestClass36 {
+
+
     public static void main(String[] args) {
         Map<Integer,String> map= new HashMap<>();
         map.put(23,"cat");
@@ -54,4 +56,8 @@ public class TestClass36 {
 
 
     }
+
+
+
+
 }

@@ -35,33 +35,34 @@ public class ArraySum extends RecursiveTask<Integer> {
             arr[i]=i;
         ArraySum arraySum = new ArraySum(arr, 0, arr.length);
         ForkJoinPool pool = ForkJoinPool.commonPool();
-        int sum = pool.invoke(arraySum);
-        System.out.println(sum);
+
         System.out.println();
-        Instant before=Instant.now();
-        //long before=System.currentTimeMillis();
-        System.out.println(Arrays.asList(arr).stream().mapToInt(x -> { int res = 0;for (int y : x) res += y;return res; }).sum());
+        //Instant before=Instant.now();
+        long before=System.currentTimeMillis();
+        //System.out.println(Arrays.asList(arr).stream().mapToInt(x -> { int res = 0;for (int y : x) res += y;return res; }).sum());
         //System.out.println(Arrays.asList(arr).parallelStream().mapToInt(x -> { int res = 0;for (int y : x) res += y;return res; }).sum());
-        Instant later=Instant.now();
-        //long later=System.currentTimeMillis();
-        System.out.println(Duration.between(before,later));
-        //System.out.println(TimeUnit.MICROSECONDS.toSeconds(later-before));
+        int sum = pool.invoke(arraySum);
+        System.out.println(">>>>"+sum);
+        //Instant later=Instant.now();
+        long later=System.currentTimeMillis();
+        //System.out.println(Duration.between(before,later));
+        System.out.println(TimeUnit.MICROSECONDS.toNanos(later-before));
     }
 
     @Override
     protected Integer compute() {
+        System.out.println("compute called!!!");
         int sum = 0;
         if (arr.length >= 3) {
-            splitArray(arr, 0, arr.length / 2);
-        } else {
             for (int i : this.arr) {
                 sum += i;
             }
+            return sum;
+        } else {
+            int middle = low + ((high - low) / 2);
+            RecursiveTask<Integer> task=new ArraySum(arr,low,middle);
+            task.fork();
+            return new ArraySum(arr,middle,high).compute()+task.join();
         }
-        return sum;
-    }
-
-    private void splitArray(int[] arr, int low, int high) {
-        new ArraySum(this.arr, low, high);
     }
 }
