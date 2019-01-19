@@ -26,7 +26,7 @@ public class TestClass1 {
 
         Path p1 = Paths.get("c:\\personal\\.\\photos\\..\\readme.txt");
         Path p2 = p1.normalize();
-        System.out.println(p2);
+        System.out.println("Normalized:\"c:\\personal\\.\\photos\\..\\readme.txt\">>>>>>>> "+p2);
         System.out.println("***");
         Path p=Paths.get(/*new URI(*/"file:///Users/300012951/work/learning/java8/java-8-certification/b.ser");
         System.out.println(p.subpath(0,7));

@@ -16,24 +16,28 @@ import java.util.concurrent.Executors;
 public class TestClass10 {
 
     public  void method1(){
-        System.out.println("1->"+Thread.currentThread().getName());
+        System.out.println("method1()->"+Thread.currentThread().getName());
+        //System.out.println("1->"+Thread.currentThread().getName());
     }
     public  void method2(){
-        System.out.println("2->"+Thread.currentThread().getName());
+        System.out.println("method2()->"+Thread.currentThread().getName());
+        //System.out.println("2->"+Thread.currentThread().getName());
     }
     public  void method3(){
-        System.out.println("3->"+Thread.currentThread().getName());
+        System.out.println("method3->"+Thread.currentThread().getName());
+        //System.out.println("3->"+Thread.currentThread().getName());
     }
 
     public void performTask(CyclicBarrier barrier) throws BrokenBarrierException, InterruptedException {
         //barrier.await();
         method1();
         barrier.await();
-        //barrier.reset();
-        //System.out.println(barrier.isBroken());
         method2();
         barrier.await();
         method3();
+        barrier.await();
+        //barrier.reset();
+        System.out.println(barrier.isBroken());
     }
 
     public static void main(String[] args) {
@@ -43,20 +47,22 @@ public class TestClass10 {
         //ExecutorService service= Executors.newFixedThreadPool(2);
         ExecutorService service= Executors.newFixedThreadPool(3);
 
-        for (int i=0;i<4;i++)
+        for (int i=1;i<4;i++)
             //service.submit(()->t.performTask());
             service.submit(() -> {
                 try {
                     t.performTask(barrier);
                 } catch (BrokenBarrierException e) {
+                    System.out.println(e);
                     e.printStackTrace();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
             });
-        if (service!=null)service.shutdown();
+        if (service!=null)
+            service.shutdown();
         //barrier.reset();
-        System.out.println(barrier.isBroken());
+       // System.out.println(barrier.isBroken());
 
     }
 }

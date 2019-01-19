@@ -17,15 +17,14 @@ public class TestClass35 {
     public static void main(String[] args) {
         int threads = 4;
         ExecutorService service = Executors.newFixedThreadPool(threads);
-        Test35A a = new Test35A();
-        CyclicBarrier barrier= new CyclicBarrier(threads);
-        for (int i = 0; i <5; i++)
-            service.submit(()->a.performTasks(barrier));
+        Test35A task = new Test35A();
+        CyclicBarrier barrier = new CyclicBarrier(threads);
+        for (int i = 0; i < 4; i++)
+            service.submit(() -> task.performTasks(barrier));
 
         service.shutdown();
     }
 }
-
 
 class Test35A {
     public void task1() {
@@ -45,19 +44,15 @@ class Test35A {
     }
 
     public void performTasks(CyclicBarrier barrier) {
-
         try {
             task1();
-            int x=barrier.await();
+            barrier.await();// At this point first thread will be waiting for other three threads, once four completes,it will execute the next statement
             task2();
-            System.out.println(x);
-            x=barrier.await();
+            barrier.await();// At this point first thread will be waiting for other three threads, once four completes,it will execute the next statement
             task3();
-            System.out.println(x);
-            x=barrier.await();
+            barrier.await();// At this point first thread will be waiting for other three threads, once four completes,it will execute the next statement
             task4();
-            System.out.println(x);
-            System.out.println(barrier.isBroken());
+            barrier.await();// At this point first thread will be waiting for other three threads, once four completes,it will execute the next statement
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (BrokenBarrierException e) {

@@ -10,10 +10,10 @@ package com.ocp.chapter2;
  */
 public class TestClass9 {
     public static void main(String[] args) {
-
         EmployeeBuilder.Employee employee= new EmployeeBuilder()
                 .setId(99)
                 .setName("Dhiraj")
                 .build();
+        System.out.println(employee.getClass());
     }
 }
