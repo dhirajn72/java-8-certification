@@ -37,7 +37,7 @@ public class TestClass6 {
         stringMap.put("C","Cat");
 
         System.out.println(stringMap);
-        stringMap.merge("TestClass1","Test",mapper);
+        stringMap.merge("TestClass1","Main",mapper);
         System.out.println(stringMap);
 
 

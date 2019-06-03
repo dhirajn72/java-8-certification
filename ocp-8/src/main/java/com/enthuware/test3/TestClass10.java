@@ -5,6 +5,8 @@
 package com.enthuware.test3;
 
 import java.util.ArrayList;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
@@ -40,5 +42,18 @@ public class TestClass10 {
         }finally{
             w.unlock();
         }
+    }
+
+
+    public static void main(String[] args) {
+        ExecutorService service= Executors.newFixedThreadPool(5);
+        TestClass10 obj=new TestClass10();
+        int i=10;
+            service.submit(()->{
+                obj.read();
+                obj.write(String.valueOf(i));});
+
+
+
     }
 }

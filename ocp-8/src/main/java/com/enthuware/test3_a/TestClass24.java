@@ -28,7 +28,7 @@ public class TestClass24 {
         };
         innerTest.m1();
         Locale locale=Locale.US;
-        int value=0;
+        int value=10;
         assert value==10:null;
     }
     class Inner{

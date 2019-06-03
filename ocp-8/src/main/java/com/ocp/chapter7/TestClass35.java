@@ -15,32 +15,31 @@ import java.util.concurrent.Executors;
  */
 public class TestClass35 {
     public static void main(String[] args) {
-        int threads = 4;
+        int threads = 10;
         ExecutorService service = Executors.newFixedThreadPool(threads);
         Test35A task = new Test35A();
         CyclicBarrier barrier = new CyclicBarrier(threads);
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < 10; i++)
             service.submit(() -> task.performTasks(barrier));
-
         service.shutdown();
     }
 }
 
 class Test35A {
     public void task1() {
-        System.out.println("task1");
+        System.out.println("task1 ->" + Thread.currentThread().getName());
     }
 
     public void task2() {
-        System.out.println("task2");
+        System.out.println("task2 ->" + Thread.currentThread().getName());
     }
 
     public void task3() {
-        System.out.println("task3");
+        System.out.println("task3 ->" + Thread.currentThread().getName());
     }
 
     public void task4() {
-        System.out.println("task4");
+        System.out.println("task4 ->" + Thread.currentThread().getName());
     }
 
     public void performTasks(CyclicBarrier barrier) {

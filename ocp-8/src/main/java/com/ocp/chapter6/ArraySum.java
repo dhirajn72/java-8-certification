@@ -23,7 +23,7 @@ public class ArraySum extends RecursiveTask<Integer> {
     }
 
     public static void main(String[] args) {
-        int[] arr = new int[5];
+        int[] arr = new int[10];
         for (int i=0;i<arr.length;i++)
             arr[i]=i;
         ArraySum arraySum = new ArraySum(arr, 0, arr.length);

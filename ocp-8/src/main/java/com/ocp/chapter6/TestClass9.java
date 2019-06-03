@@ -13,6 +13,6 @@ public class TestClass9 {
         args=new String[]{"hi","there"};
         if(args.length<=3)
             assert false:"fails";
-        System.out.println(args[0]+args[1]+args[2]);
+        System.out.println(args[0]+args[1]);
     }
 }

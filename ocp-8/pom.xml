@@ -32,6 +32,11 @@
           <version>3.0</version>
       </dependency>
 
+    <dependency>
+      <artifactId>slf4j-api</artifactId>
+      <groupId>org.slf4j</groupId>
+    </dependency>
+
   </dependencies>
 
   <build>

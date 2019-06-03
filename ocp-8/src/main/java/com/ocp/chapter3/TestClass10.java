@@ -10,7 +10,7 @@ package com.ocp.chapter3;
  */
 public class TestClass10 {
     public static void main(String[] args) {
-       // System.out.println(Assertion.<String>ship("Test"));
+       // System.out.println(Assertion.<String>ship("Main"));
         //System.out.println(Assertion.<String[]>ship(new String[]{"x","y","z"}));
 
     }

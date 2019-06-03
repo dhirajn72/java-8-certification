@@ -4,6 +4,7 @@
 
 package com.ocp.chapter7;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
@@ -23,5 +24,14 @@ public class TestClass28 {
         //}
         // Xa Xb Xc Xd Xe    XaXbXcXdXe
         Arrays.asList('w','o','l','f').parallelStream().collect(ConcurrentSkipListSet::new, ConcurrentSkipListSet::add, ConcurrentSkipListSet::addAll).forEach(System.out::println);
+        List<String> strings= Arrays.asList('w','o','l','f').stream()
+                .collect(ArrayList::new,
+                (list,item)->list.add(String.valueOf(item)),
+                (l1,l2)->l1.addAll(l2));
+        System.out.println(strings);
+
+
+
+
     }
 }
