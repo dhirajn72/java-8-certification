@@ -27,7 +27,7 @@ public class TestClass23 {
             System.out.println("DateTimeException |IOException e");
             e.printStackTrace();
         } catch (Exception e) {
-            System.out.println("Exception");
+            System.out.println("Exception_1");
             e.printStackTrace();
         }
     }

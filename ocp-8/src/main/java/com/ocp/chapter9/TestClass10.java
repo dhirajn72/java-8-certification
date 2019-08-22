@@ -4,10 +4,7 @@
 
 package com.ocp.chapter9;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Locale;
-import java.util.ResourceBundle;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -28,17 +25,27 @@ public class TestClass10 {
         List<String> list2= Arrays.asList("apple","ball","cat","dog");
 
         Stream<List<String>> stream= Stream.of(list,list1,list2);
-        //stream.flatMap(x->x.stream()).forEach(System.out::println);
-        stream.flatMap(x->Stream.of(x)).forEach(System.out::println);
+        stream.flatMap(x->x.stream()).forEach(System.out::println);
+        //stream.flatMap(x->Stream.of(x)).forEach(System.out::println);
+        /*List<List<String>> lists= new ArrayList<>();
+        lists.add(list);
+        lists.add(list1);
+        lists.add(list2);
+        lists.stream().flatMap(x->Stream.of(x))
+                .forEach(x->x.stream().forEach(y->System.out.println(y)));
+        System.out.println("**");
+        lists.stream().flatMap(x->x.stream())
+                .forEach(y->System.out.println(y));*/
 
-        list2.stream().filter(x->x.length()==3).sorted().collect(Collectors.toList()).stream().forEach(System.out::println);
 
-        int a=10;
+        //list2.stream().filter(x->x.length()==3).sorted().collect(Collectors.toList()).stream().forEach(System.out::println);
+
+        /*int a=10;
         int b=20;
 
         a=a+b; // 30
         b=a-b;// 10
         a=a-b;
-        System.out.println(a+" "+b);
+        System.out.println(a+" "+b);*/
     }
 }

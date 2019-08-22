@@ -2,18 +2,15 @@
  * All Rights Reserved @Dhiraj
  */
 
-package com.enthuware.test3_a;
+package interview;
+
+import java.util.LinkedList;
 
 /**
  * @author Dhiraj
- * @date 05/09/18
+ * @date 13/08/19
  */
-// Java program to explain the
-// concept of joining a thread.
-
-// Creating thread by creating the
-// objects of that class
-class ThreadJoining extends Thread {
+public class ThreadJoin extends Thread {
     @Override
     public void run() {
         for (int i = 0; i < 2; i++) {
@@ -25,49 +22,47 @@ class ThreadJoining extends Thread {
                 System.out.println("Exception_1 has" +
                         " been caught" + ex);
             }
-            //System.out.println(i);
+            System.out.println(i);
         }
     }
 }
 
-public class GFG {
+class GFG {
     public static void main(String[] args) {
-        ThreadJoining t1 = new ThreadJoining();
-        ThreadJoining t2 = new ThreadJoining();
-        ThreadJoining t3 = new ThreadJoining();
+
+        // creating two threads
+        ThreadJoin t1 = new ThreadJoin();
+        ThreadJoin t2 = new ThreadJoin();
+        ThreadJoin t3 = new ThreadJoin();
+
+
+        // thread t1 starts
         t1.start();
+
+        // starts second thread after when
+        // first thread t1 has died.
         try {
             System.out.println("Current Thread: "
                     + Thread.currentThread().getName());
             t1.join();
-            System.out.println("Current Thread(main): "
-                    + Thread.currentThread().getName());
         } catch (Exception ex) {
             System.out.println("Exception_1 has " +
                     "been caught" + ex);
         }
+
+        // t2 starts
         t2.start();
+
+        // starts t3 after when thread t2 has died.
         try {
             System.out.println("Current Thread: "
                     + Thread.currentThread().getName());
             t2.join();
-            System.out.println("Current Thread(main): "
-                    + Thread.currentThread().getName());
         } catch (Exception ex) {
             System.out.println("Exception_1 has been" +
                     " caught" + ex);
         }
+
         t3.start();
-        try {
-            System.out.println("Current Thread: "
-                    + Thread.currentThread().getName());
-            t3.join();
-            System.out.println("Current Thread(main): "
-                    + Thread.currentThread().getName());
-        } catch (Exception ex) {
-            System.out.println("Exception_1 has been" +
-                    " caught" + ex);
-        }
-        System.out.println("main terminating !!");
     }
 }

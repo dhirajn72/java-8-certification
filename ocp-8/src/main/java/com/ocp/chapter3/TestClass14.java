@@ -20,7 +20,7 @@ import java.util.List;
 public class TestClass14 {
     public static void main(String[] args) {
         List<? super IOException> ioExceptions= new ArrayList<Exception>();
-        //ioExceptions.add(new Exception());
+        //ioExceptions.add(new Exception_1());
         ioExceptions.add(new IOException());
         ioExceptions.add(new FileNotFoundException());
         List<String> list=new ArrayList<String>();

@@ -22,7 +22,7 @@ public class TestClass12 implements AutoCloseable{
             throw  new RuntimeException();
         }
         catch (Exception e){
-            System.out.println("Exception");
+            System.out.println("Exception_1");
             e.printStackTrace();
             //System.out.println(e.getMessage());
             //e.getSuppressed();

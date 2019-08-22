@@ -161,6 +161,6 @@ If static fields of type parameters were allowed, then the following code would 
  * @param <T>
  */
 
-/*class BadException<T> extends Exception{
+/*class BadException<T> extends Exception_1{
 
 }*/

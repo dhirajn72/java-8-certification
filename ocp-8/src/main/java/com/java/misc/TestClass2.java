@@ -21,6 +21,8 @@ public class TestClass2 {
         Runnable runnable=()-> {};
         new Thread(runnable);
 
+        System.out.println(Long.valueOf(null));
+
 
     }
 }

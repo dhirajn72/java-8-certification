@@ -31,7 +31,7 @@ public class TestClass8 {
 
         System.out.println("***");
         List<String> vals = Arrays.asList("a", "b");
-        String join = vals.parallelStream().reduce("_", (a, b)->a.concat(b));
+        String join = vals.stream().reduce("_", (a, b)->a.concat(b));
         System.out.println(join);
         System.out.println("*****");
         List<String> names = Arrays.asList("greg", "dave", "don", "ed", "fred" );

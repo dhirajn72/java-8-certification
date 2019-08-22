@@ -37,12 +37,12 @@ public interface Measurement{
 
 interface Size extends Measurement{
     public static final int UNIT = 100;
-    //public static int getLength(){ return 10;}
+    public static int getLength(){ return 10;}
 
-    public default int getLength(){
+    /*public default int getLength(){
         return 0;
-    }
-    //public static int getBreadth(){ return 0; }
+    }*/
+    public default int getBreadth(){ return 0; }
 }
 
 enum Pets

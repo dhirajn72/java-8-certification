@@ -19,7 +19,7 @@ public class TestClass8 {
         try (JammedTurkey jammedTurkey1 = new JammedTurkey(1);
              JammedTurkey jammedTurkey2 = new JammedTurkey(2)) {
             throw new IllegalStateException("proble inside try!!!");
-        } /*catch (Exception e) {
+        } /*catch (Exception_1 e) {
             Throwable[] throwables = e.getSuppressed();
             PrintSuppressed printSuppressed = (x) ->{
                 System.out.println(x.getCause()); return x.getCause();};
