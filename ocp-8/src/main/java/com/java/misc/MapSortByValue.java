@@ -36,17 +36,19 @@ public class MapSortByValue {
             finalMap.put(Integer.valueOf(valueKey[1]),valueKey[0]);
         }*/
 
-       // map=map.entrySet().stream().sorted(Map.Entry.comparingByKey()).collect(Collectors.toMap(Map.Entry::getKey,Map.Entry::getValue,(key1,key2)->key1,LinkedHashMap::new));
+        map=map.entrySet().stream()
+                .sorted(Map.Entry.comparingByValue())
+                .collect(Collectors.toMap(Map.Entry::getKey,Map.Entry::getValue,(key1,key2)->key1,LinkedHashMap::new));
 
-        Set<Map.Entry<Integer,String>> entries= map.entrySet();
+       /* Set<Map.Entry<Integer,String>> entries= map.entrySet();
         List<Map.Entry<Integer,String>> entries1= new ArrayList<>(entries);
         Collections.sort(entries1,Comparator.comparing(Map.Entry::getValue));
         Map<Integer,String> map1=new LinkedHashMap<>();
         entries1
                 .stream()
                 .forEach(ob->map1.put(ob.getKey(),ob.getValue()));
+        System.out.println("final map"+ map );*/
         System.out.println("final map"+ map );
-        System.out.println("final map"+ map1 );
 
 
     }

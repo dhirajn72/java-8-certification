@@ -47,7 +47,7 @@ public class TestClass10 {
         //ExecutorService service= Executors.newFixedThreadPool(2);
         ExecutorService service= Executors.newFixedThreadPool(3);
 
-        for (int i=1;i<4;i++)
+        for (int i=1;i<7;i++)
             //service.submit(()->t.performTask());
             service.submit(() -> {
                 try {
