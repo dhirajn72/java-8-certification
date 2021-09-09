@@ -4,7 +4,6 @@
 
 package com.ocp.chapter1;
 
-import org.apache.commons.lang3.builder.EqualsBuilder;
 
 import java.io.*;
 import java.nio.file.Path;
@@ -112,21 +111,21 @@ class Lion implements Serializable{
     public boolean equals(Object obj) {
 
         //1st way!!
-        /*if (! (obj instanceof Lion))
+        if (! (obj instanceof Lion))
             return false;
         Lion l1=(Lion)obj;
         return this.id==l1.id && this.name.equals(l1.getName()) && this.weight==l1.weight;
-        */
+
 
         //2nd way!!
-        if (!(obj instanceof Lion))
+       /* if (!(obj instanceof Lion))
             return false;
         Lion l1=(Lion)obj;
         return  new EqualsBuilder().append(this.id,l1.getId())
                 .append(this.name,l1.getName())
                 .append(this.weight,l1.getWeight())
                 .isEquals();
-
+        */
         //3rd way!!
         //return EqualsBuilder.reflectionEquals(this,obj);
     }

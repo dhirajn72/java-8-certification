@@ -4,8 +4,6 @@
 
 package com.ocp.chapter1;
 
-import org.apache.commons.lang3.builder.EqualsBuilder;
-import org.apache.commons.lang3.builder.ToStringBuilder;
 
 /**
  * @author Dhiraj
@@ -33,12 +31,12 @@ public class TestClass1 {
 
     @Override
     public String toString() {
-        return ToStringBuilder.reflectionToString(this);
+        return "";
     }
 
     @Override
     public boolean equals(Object obj) {
-        return EqualsBuilder.reflectionEquals(this,obj);
+        return true;
     }
 }
 

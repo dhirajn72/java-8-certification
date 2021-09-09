@@ -7,6 +7,7 @@
   <version>1.0-SNAPSHOT</version>
     <modules>
         <module>ocp-8</module>
+        <module>java-8-features</module>
     </modules>
     <packaging>pom</packaging>
 
