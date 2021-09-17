@@ -1,9 +1,10 @@
 package com.oracle.optional;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.atomic.AtomicReference;
 
 public class Test1 {
 	public static Optional<String> getGrade(int marks) {
@@ -39,6 +40,24 @@ public class Test1 {
 			List<String > list=listOptional.get();
 			list.stream().filter(e->!e.isEmpty()).forEach(e->System.out.println(e));
 		}
+		System.out.println("--------------");
+		printEmployee(employee);
+	}
+
+	private static void printEmployee(Optional<Employee> employee) {
+		if (employee.isPresent()) {
+			Employee emp = employee.get();
+			System.out.println(emp.id);
+			System.out.println(emp.name);
+		}
+		AtomicInteger id = new AtomicInteger();
+		AtomicReference<String> name = new AtomicReference<String>();
+		employee.ifPresent(e -> {
+			id.set(e.id);
+			name.set(e.name);
+		});
+		System.out.println(id.get());
+		System.out.println(name.get());
 	}
 
 	static Optional<Employee> getEmployee(){

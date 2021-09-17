@@ -4,7 +4,6 @@
 
 package com.enthuware.test3;
 
-import org.apache.commons.lang3.builder.ToStringBuilder;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -56,6 +55,6 @@ class Employee{
 
     @Override
     public String toString() {
-        return ToStringBuilder.reflectionToString(this);
+        return id+":"+name;
     }
 }

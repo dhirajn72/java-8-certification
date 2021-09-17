@@ -4,30 +4,14 @@
 
 package interview;
 
-import java.util.LinkedList;
 
 /**
  * @author Dhiraj
  * @date 13/08/19
  */
-public class ThreadJoin extends Thread {
-    @Override
-    public void run() {
-        for (int i = 0; i < 2; i++) {
-            try {
-                Thread.sleep(500);
-                System.out.println("Current Thread: "
-                        + Thread.currentThread().getName());
-            } catch (Exception ex) {
-                System.out.println("Exception_1 has" +
-                        " been caught" + ex);
-            }
-            System.out.println(i);
-        }
-    }
-}
 
-class GFG {
+
+public class GFG {
     public static void main(String[] args) {
 
         // creating two threads
@@ -64,5 +48,21 @@ class GFG {
         }
 
         t3.start();
+    }
+     static class ThreadJoin extends Thread {
+        @Override
+        public void run() {
+            for (int i = 0; i < 2; i++) {
+                try {
+                    Thread.sleep(500);
+                    System.out.println("Current Thread: "
+                            + Thread.currentThread().getName());
+                } catch (Exception ex) {
+                    System.out.println("Exception_1 has" +
+                            " been caught" + ex);
+                }
+                System.out.println(i);
+            }
+        }
     }
 }

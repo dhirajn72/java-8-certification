@@ -4,7 +4,6 @@
 
 package com.enthuware.test3;
 
-import com.mysql.fabric.xmlrpc.base.Array;
 
 import java.util.ArrayList;
 import java.util.stream.DoubleStream;

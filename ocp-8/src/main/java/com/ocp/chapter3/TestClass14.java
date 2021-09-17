@@ -4,7 +4,6 @@
 
 package com.ocp.chapter3;
 
-import org.apache.commons.lang3.builder.ToStringBuilder;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -80,7 +79,7 @@ class Emp implements Comparable{
 
     @Override
     public String toString() {
-        return ToStringBuilder.reflectionToString(this);
+        return id+":"+name;
     }
 
     @Override

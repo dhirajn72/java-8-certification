@@ -4,8 +4,6 @@
 
 package com.java.misc;
 
-import org.apache.commons.lang3.builder.ToStringBuilder;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -72,6 +70,6 @@ class Squirrel{
 
     @Override
     public String toString() {
-        return ToStringBuilder.reflectionToString(this);
+        return weight+":"+species;
     }
 }

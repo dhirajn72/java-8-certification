@@ -4,7 +4,6 @@
 
 package com.ocp.chapter3;
 
-import org.apache.commons.lang3.builder.ToStringBuilder;
 
 /**
  * @author Dhiraj
@@ -37,6 +36,6 @@ public class Duck {
 
     @Override
     public String toString() {
-        return ToStringBuilder.reflectionToString(this);
+        return weight+":"+name ;
     }
 }

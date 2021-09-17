@@ -4,7 +4,6 @@
 
 package com.ocp.chapter3;
 
-import org.apache.commons.lang3.builder.ToStringBuilder;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -57,7 +56,7 @@ class Squirrel{
 
     @Override
     public String toString() {
-        return ToStringBuilder.reflectionToString(this);
+        return weight+":"+species;
     }
 }
 
